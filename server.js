@@ -10,14 +10,13 @@ const connection = mysql.createConnection({
     host: 'localhost',
     // Your username
     user: process.env.DB_USER,
-
     password: process.env.DB_PASS,
     database: process.env.DB_NAME,
 });
 
 
 function init() {
-    console.log("wwelcome to ET");
+    console.log("Welcome to Employee Tracker!");
 
     connection.connect(function (err) {
         if (err) throw err;
@@ -28,16 +27,17 @@ function init() {
 inquirer
   .prompt([
    {
-       type: "list", 
-       mesage: "What would you like to do ? ", 
+       type: 'list', 
+       message: "What would you like to do?", 
        name:'userInput', 
-       choices:[ "View em", "None"]
-   }
+       choices:[ "View Employees", "Add Employee", "Update Employee Role", "View All Roles", "Add Role", "View All Departments", "Add Department"]
+   },
+
   ])
   .then((answers) => {
     console.log(answers)
 
-    connection.query("SELECT * from employee", )
+    connection.query('SELECT * from employee', )
   })
   .catch((error) => {
     if (error.isTtyError) {
