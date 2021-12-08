@@ -4,8 +4,8 @@ const inquirer = require('inquirer');
 const mysql = require('mysql2');
 
 
-require('console.table');
-require('dotenv').config();
+const table= require('console.table');
+const dotenv = require('dotenv').config();
 const db = mysql.createConnection({
   host: 'localhost',
   user: process.env.DB_USER,
@@ -65,12 +65,12 @@ function addEmployee() {
   inquirer.prompt([
   {
       type: 'input',
-      name: 'firstName',
+      name: 'first_name',
       message: 'What is the employees first name?',
   },
   {
       type: 'input',
-      name: 'lastName',
+      name: 'last_name',
       message: 'What is the employees last name?',    
   },
   {
@@ -91,7 +91,7 @@ function addEmployee() {
           if(err){
               // console.error(err);
           }
-          // console.log(res);
+          
           console.log('Employee Added Successfully');
           menu();
       });
@@ -103,7 +103,7 @@ function addRole() {
   inquirer.prompt([
   {
       type: 'input',
-      name: 'newRole',
+      name: 'new_role',
       message: 'What new role would you like to add?',
   },
   {
@@ -150,4 +150,4 @@ function finish() {
  console.log('Fin')
 };
 
-init();
+// init();
