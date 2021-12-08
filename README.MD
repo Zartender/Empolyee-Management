@@ -45,6 +45,18 @@ The following video shows an example of the application being used from the comm
 
 Make sure that your MySQL password is not used for any other personal accounts, because it will be visible on GitHub. In upcoming lessons, you will learn how to better secure this password, or you can start researching npm packages now that could help you.
 
+## Video Walkthrough
+
+* [Youtube](https://youtu.be/rEp-_BkLpWU)
+
+## Screenshots
+
+*   ![Screenshot](/Assets/cms1.png)
+*   ![Screenshot](/Assets/cms2.png)
+*   ![Screenshot](/Assets/cms3.png)
+*   ![Screenshot](/Assets/cms4.png)
+
+
 ## Project Owner
 
 [Ian Greenblott's Github](https://github.com/Zartender)
